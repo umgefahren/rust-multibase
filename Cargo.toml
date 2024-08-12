@@ -9,6 +9,7 @@ description = "multibase in rust"
 homepage = "https://github.com/multiformats/rust-multibase"
 repository = "https://github.com/multiformats/rust-multibase"
 keywords = ["ipld", "ipfs", "multihash", "cid", "no_std"]
+resolver = "2"
 
 [features]
 default = ["std"]
