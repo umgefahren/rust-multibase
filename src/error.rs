@@ -24,6 +24,9 @@ impl fmt::Display for Error {
 #[cfg(feature = "std")]
 impl std::error::Error for Error {}
 
+#[cfg(not(feature = "std"))]
+impl core::error::Error for Error {}
+
 impl From<base_x::DecodeError> for Error {
     fn from(_: base_x::DecodeError) -> Self {
         Self::InvalidBaseString
